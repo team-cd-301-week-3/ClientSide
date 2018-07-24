@@ -10,11 +10,6 @@ var app = app || {};
     app.Book.all.forEach(book => $('#book-list').append(book.toHtml()));
   };
 
-
-
-
-
-
   module.bookView = bookView;
 
 })(app);

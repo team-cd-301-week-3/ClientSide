@@ -30,11 +30,4 @@ var app = app || {};
     return template(dataToRender);
   };
 
-
-
-
-
-
-
-
 })(app);
