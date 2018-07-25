@@ -37,6 +37,11 @@ var app = app || {};
     app.Book.createBook(book);
   });
 
+  // bookView.initUpdatePage = (book) => {
+  //   //this needs something else
+  //   console.log('update', book);
+  // };
+
   module.bookView = bookView;
 
 })(app);
