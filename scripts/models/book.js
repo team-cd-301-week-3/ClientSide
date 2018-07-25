@@ -29,6 +29,19 @@ var app = app || {};
       .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);
+
+
+  Book.fetchOne = (bookId, callback) =>
+    $.get(`${app.ENVIRONMENT.apiUrl}/task/${bookId}`)
+      .then(bookData => callback(new Book(bookData)))
+      .catch(errorCallback);
+
+
+  Book.createBook = book =>
+    $.post(`${app.ENVIRONMENT.apiUrl}/books/add`, book)
+      .then(() => page('/'))
+      .catch(errorCallback);
+
   module.Book = Book;
 
 })(app);
