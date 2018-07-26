@@ -13,13 +13,24 @@
     <li class="book-item">
       <p>Title: {{title}}</p>
       <p>Author: {{author}}</p>
-      <p>ISBN: {{isbn}}</p>
-      <p>Image: {{image_url}}</p>
-      <p>Description {{description}}</p>
+      <!-- <p>ISBN: {{isbn}}</p> -->
+      <p>Image:<img src="{{image_url}}"/></p>
+      <!-- <p>Description {{description}}</p> -->
       <p>
         <a href="/book/{{id}}/update">Update</a>
         <a href="/book/{{id}}/delete">Delete</a>
+        <a href="/book/{{id}}">Book Details</a>
       </p>
+    </li>
+  </script>
+
+  <script type="text/x-handlebars-template" id="book-detail-template">
+    <li class="book-items">
+      <p>Title: {{title}}</p>
+      <p>Author: {{author}}</p>
+      <p>ISBN: {{isbn}}</p>
+      <p>Image: <img src="{{image_url}}"/></p>
+      <p>Description: {{description}}</p>
     </li>
   </script>
 
@@ -44,7 +55,9 @@
 
     <section class="book-detail container">
       <h3>Book Detail</h3>
-      <div id="book-detail"></div>
+      <section class="book-stuff">
+        <ul id="book-detail"></ul>
+      </section>
     </section>
 
     <section class="form-view container">
