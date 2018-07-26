@@ -16,6 +16,11 @@ var app = app || {};
     return app.render('book-list-template', this);
   };
 
+  Book.prototype.detailHtml = function() {
+    console.log('tohtml');
+    return app.render('book-detail-template', this);
+  };
+
   Book.all = [];
 
   const filterBy = (key) => (a, b) => a[key] < b[key] ? -1 : a[key] > b[key] ? 1 : 0;
@@ -32,7 +37,7 @@ var app = app || {};
 
 
   Book.fetchOne = (bookId, callback) =>
-    $.get(`${app.ENVIRONMENT.apiUrl}/task/${bookId}`)
+    $.get(`${app.ENVIRONMENT.apiUrl}/book/${bookId}`)
       .then(bookData => callback(new Book(bookData)))
       .catch(errorCallback);
 
