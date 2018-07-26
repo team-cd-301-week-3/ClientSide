@@ -30,20 +30,20 @@ var app = app || {};
   };
 
   Book.fetchAll = callback =>
-    $.get(`${app.ENVIRONMENT.apiUrl}/books`)
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/vi/books`)
       .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);
 
 
   Book.fetchOne = (bookId, callback) =>
-    $.get(`${app.ENVIRONMENT.apiUrl}/book/${bookId}`)
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/vi/book/${bookId}`)
       .then(bookData => callback(new Book(bookData)))
       .catch(errorCallback);
 
 
   Book.createBook = book =>
-    $.post(`${app.ENVIRONMENT.apiUrl}/books/add`, book)
+    $.post(`${app.ENVIRONMENT.apiUrl}/api/vi/books/add`, book)
       .then(() => page('/'))
       .catch(errorCallback);
 
