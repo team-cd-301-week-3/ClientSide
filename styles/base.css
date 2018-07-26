@@ -1,1 +1,7 @@
-body{background-color: aqua;}
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #8d7e7e;
+}
