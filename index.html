@@ -14,9 +14,22 @@
     <li class="book-item">
       <p>Title: {{title}}</p>
       <p>Author: {{author}}</p>
+      <!-- <p>ISBN: {{isbn}}</p> -->
+      <p>Image:<img src="{{image_url}}"/></p>
+      <!-- <p>Description {{description}}</p> -->
+      <p>
+        <a href="/book/{{id}}">Book Details</a>
+      </p>
+    </li>
+  </script>
+
+  <script type="text/x-handlebars-template" id="book-detail-template">
+    <li class="book-items">
+      <p>Title: {{title}}</p>
+      <p>Author: {{author}}</p>
       <p>ISBN: {{isbn}}</p>
-      <p>Image: {{image_url}}</p>
-      <p>Description {{description}}</p>
+      <p>Image: <img src="{{image_url}}"/></p>
+      <p>Description: {{description}}</p>
       <p>
         <a href="/book/{{id}}/update">Update</a>
         <a href="/book/{{id}}/delete">Delete</a>
@@ -47,7 +60,9 @@
 
     <section class="book-detail container">
       <h3>Book Detail</h3>
-      <div id="book-detail"></div>
+      <section class="book-stuff">
+        <ul id="book-detail"></ul>
+      </section>
     </section>
 
     <section class="form-view container">
@@ -61,6 +76,22 @@
         <button type="submit"> Add your Book</button>
       </form>
     </section>
+
+    <!-- <section class="update-view containter"> 
+      <h3>Make Changes to Your Book</h3>
+      <form id="update-form">
+        <input type="hidden" name=id/>
+        <input type="text" name="title" placeholder="New Book Name"/>
+        <input type="text" name="author" placeholder="New Author Name"/>
+        <input type="text" name="isbn" placeholder="isbn"/>
+        <input type="text" name="image_url" placeholder="New Image Source"/>
+        <textarea name="description" cols="60" rows="10"></textarea>
+        <button type="submit">Update Book</button>
+      </form> -->
+
+    </section>
+
+
   </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>

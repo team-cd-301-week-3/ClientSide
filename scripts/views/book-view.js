@@ -14,8 +14,10 @@ var app = app || {};
 
   bookView.initDetailPage = book => {
     app.showOnly('.book-detail');
+    console.log('hello');
 
-    $('#book-detail').empty().append(book.toHtml());
+    $('#book-detail').empty().append(book.detailHtml());
+
   };
 
   bookView.initAddPage = () => {
