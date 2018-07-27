@@ -3,5 +3,27 @@ img {
 }
 
 body {
-  background-color: #8d7e7e;
+  margin: 0;
+	font-family: Arial;
+	font-family: "Roboto", sans-serif;
+  background-color: #b9b6b6;
+}
+main{
+  background-color: #7a9781;
+  
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+  background-color: rgb(22, 247, 41);
+	color: white;
+	text-align: center;
+}
+
+section {
+margin-bottom: 55px;
+
 }
