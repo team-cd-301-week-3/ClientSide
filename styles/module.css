@@ -35,8 +35,9 @@ main header div {
 }
 
 nav ul {
-  margin-left: -200px;
-  margin-bottom: -200px;
+  /* we want to display: block or display none */
+  margin-left: -200px; 
+  margin-bottom: -120px;
   padding: 0;
 }
 
