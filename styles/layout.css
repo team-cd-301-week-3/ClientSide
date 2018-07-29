@@ -18,7 +18,7 @@ main {
 }
 
 form{
-  width: 50%;
+  width: 100%;
   justify-self: center;
   text-align: center;
 }
@@ -46,4 +46,24 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #45a049;
+}
+input, textarea, button {
+  width: 100%;
+  margin-bottom: 5vw;
+  padding: 3vw 0;
+  border: none;
+  border-radius: 3px;
+}
+
+input, textarea {
+  width: 98%;
+  padding-left: 2%;
+}
+
+button {
+  text-transform: capitalize;
+  background-color: #444;
+  color: #ddd;
+  font-size: 4vw;
+  font-weight: bolder;
 }

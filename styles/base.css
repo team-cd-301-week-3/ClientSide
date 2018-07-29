@@ -27,3 +27,29 @@ section {
 margin-bottom: 55px;
 
 }
+
+.tab {
+	float:left;
+	list-style-type: none;
+	text-decoration: none;
+	color: #777;
+	padding:10px;
+	font-size: 1.75em;
+}
+a {
+	text-decoration: none;
+	color: #777;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
