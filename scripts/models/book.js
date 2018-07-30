@@ -49,6 +49,18 @@ var app = app || {};
 
 
 
+  //update not working properly
+  // Book.updateBook = (book, bookId) =>
+  //   $.ajax({
+  //     method: 'PUT',
+  //     url: `${app.ENVIRONMENT.apiUrl}/api/v1/books/${book.id}`,
+  //     data: book
+  //   })
+  //     .then(() => page(`/books/${bookId}`));
+      
+
+
+
 
 
 
