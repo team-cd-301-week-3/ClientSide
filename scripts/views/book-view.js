@@ -36,6 +36,36 @@ var app = app || {};
       description: this.description.value,
     };
 
+
+
+    //Couldn't get update to work so I am commenting out all the update stuff
+
+    // bookView.initUpdatePage = (book) => {
+    //   app.showOnly('.update-view');
+  
+    //   let $form = $('#update-form');
+
+    //   Object.keys(book)
+    //     .forEach(key => {
+    //       $form.find(`[name="${key}"]`).val(book[key]);
+    //     });
+    // };
+  
+    // $('#update-form').on('submit', function (event) {
+    //   event.preventDefault();
+    //   let bookId = parseInt(this.id.value);
+    //   let book = {
+    //     id: bookId,
+    //     title: this.title.value,
+    //     description: this.description.value,
+    //     author: this.author.value,
+    //     isbn: this.isbn.value,
+    //     image_url: this.image_url.value,
+    //     genre: this.genre.value
+    //   };
+    //   app.Book.updateBook(book, () => page(`/`));
+    // });
+
     app.Book.createBook(book);
   });
 
